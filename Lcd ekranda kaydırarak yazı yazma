@@ -1,0 +1,24 @@
+#include<LiquidCrystal.h>
+LiquidCrystal lcd(11,10,8,7,4,2); //LCD nin arduino üzerinde bağlandığı pinler
+
+void setup(){
+lcd.begin(16,2);
+}
+
+void loop(){
+int i;
+
+for(i=0; i<17; i++)
+
+{
+lcd.setCursor(i,0);
+lcd.print("Merhaba");  
+lcd.setCursor(i,1); // İstediğinizi yazabilirsiniz. Tabi 16 karakter den küçük olmalı...
+lcd.print("i");
+delay(1000);
+lcd.setCursor(i,0);
+lcd.print(" ");
+lcd.setCursor(i,1);  
+lcd.print(" ");
+}
+}
